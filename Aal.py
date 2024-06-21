@@ -38,7 +38,7 @@ def speak(audio):
 def wishMe():
     hour = int(datetime.datetime.now().hour)
     if hour>= 0 and hour<12:
-        speak("Good Morning, Omar")
+        speak("Good Morning")
     elif hour>= 12 and hour<18:
         speak ("Good Afternoon Sir")
     else:
@@ -132,26 +132,9 @@ if __name__ == '__main__':
             speak ("Here is Hack the Box, Good luck master")
             webbrowser.open("hackthebox.com")
 
-        elif 'play music' in query or 'play song' in query:
-           speak("Your songs will play shortly.")
-           #music_dir = "G:\\Songs"
-           music_dir = r"c:\Users\sanch\OneDrive\Desktop\Spotify.url"
-           song = os.listdir(music_dir)
-           print(songs)
-           random = os.startfile(os.path.join(music_dir, songs[1]))
-
         elif 'the time' in query:
             strTime = dateTime.datetime.now().strftime("% H:% M:% S")
             speak ("Sir the time is {strTime}")
-
-        elif 'open opera' in query:
-            codePath = r"c:\Users\sanch\OneDrive\Desktop\Opera Browser.lnk"
-            os.startfile(codePath)
-        
-        elif 'open notion' in query:
-            speak ("Notion will be open shortly.")
-            codePath = r"c:\Users\sanch\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Notion.lnk"
-            os.startfile(codePath)
         
         elif 'email to Joe' in query:
             try:
